@@ -8,7 +8,7 @@ if __name__ == "__main__":
     model = LSTMNER.LSTM(len(load_index.word_index), len(load_index.label_index))
     if os.path.exists('./model/LSTM_model'):
         model.load_state_dict(torch.load('./model/LSTM_model'))
-    test_sentence = '南京市长江大桥上的汽车。'
+    test_sentence = '中国和美国。'
     index_list = []
     for each_word in test_sentence:
         index_list.append(load_index.word_index[each_word])
